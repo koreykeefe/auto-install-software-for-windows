@@ -9,7 +9,7 @@ To check if winget is installed, run  PowerShell and enter `winget`.
 1. Run PowerShell
 2. Enter `winget search <applicaiton>`
 
-![Searching for Applications Example](/assets/images/tux.png)
+![Searching for Applications Example](winget-search.PNG)
 
 ## Installing Applications
 
@@ -27,3 +27,7 @@ To check if winget is installed, run  PowerShell and enter `winget`.
 2. Enter the Script File Path
 
     > e.g., PS C:\Users\korey> `OneDrive\batchInstall.ps1`
+
+<br>
+
+For more information, see the winget [documentation](https://docs.microsoft.com/en-us/windows/package-manager/winget/).

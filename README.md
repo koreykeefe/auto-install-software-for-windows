@@ -1,15 +1,29 @@
-# Automatically Install Software For Windows
+# Batch Install Applications on Windows
 
-I like to periodically install a completely clean version of Windows.
-I used to have to go on the internet to find the software I typically use and manually configure it.
-Now I have automated that process by createing this script which automatically installs all of my favorite software in the background.
+This script uses the `winget` command line utility to install applications.
+Winget comes bundled with Windows 11 and modern versions of Windows 10 by default as App Installer.
+To check if winget is installed, run  PowerShell and enter `winget`.
+
+## Searching for Applications
+
+1. Run PowerShell
+2. Enter `winget search <applicaiton>`
+
+![Searching for Applications Example](/assets/images/tux.png)
+
+## Installing Applications
+
+1. Run PowerShell
+2. Enter `winget install <Id>`
+
+## Enabling the Execution of Scripts
+
+1. Run PowerShell as **Administrator**
+2. Enter `Set-ExecutionPolicy RemoteSigned` to run locally created scripts
 
 ## Running the Script
 
-1. Run PowerShell as Administrator
-2. Enter `Set-ExecutionPolicy RemoteSigned` to run local scripts
-3. Close Administrator PowerShell Window
-4. Run PowerShell (not as Administrator this time)
-3. Enter Script File Path
+1. Run PowerShell
+2. Enter the Script File Path
 
-    > e.g., PS C:\Users\korey> `Downloads\autoInstall.ps1`
+    > e.g., PS C:\Users\korey> `OneDrive\batchInstall.ps1`

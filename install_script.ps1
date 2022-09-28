@@ -1,8 +1,13 @@
-winget install Google.Chrome --silent
-winget install Spotify.Spotify --silent
-winget install Discord.Discord --silent
-winget install Valve.Steam --silent
+$app_ids = @(
+    "Google.Chrome"
+    "Spotify.Spotify"
+    "Discord.Discord"
+    "Valve.Steam"
+    "Microsoft.Office"
+    "Figma.Figma"
+    "Oracle.VirtualBox"
+)
 
-winget install Microsoft.Office --silent
-winget install Figma.Figma --silent
-winget install Oracle.VirtualBox --silent
+foreach ($app_id in $app_ids) {
+    winget install $app_id --id --silent --accept-package-agreements --accept-source-agreements
+}

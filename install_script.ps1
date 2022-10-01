@@ -1,4 +1,4 @@
-$app_ids = @(
+$id_arr = @(
     "Google.Chrome"
     "Spotify.Spotify"
     "Discord.Discord"
@@ -8,6 +8,6 @@ $app_ids = @(
     "Oracle.VirtualBox"
 )
 
-foreach ($app_id in $app_ids) {
-    winget install $app_id --id --silent --accept-package-agreements --accept-source-agreements
+foreach ($id in $id_arr) {
+    winget install --id=$id --silent --accept-package-agreements --accept-source-agreements
 }
